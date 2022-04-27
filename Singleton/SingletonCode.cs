@@ -2,8 +2,11 @@ using System;
 
 namespace padroes_de_projeto.Singleton
 {
-    public class SingletonCode
+    public class Client
     {
-        
+        public void Main()
+        {
+
+        }
     }
 }

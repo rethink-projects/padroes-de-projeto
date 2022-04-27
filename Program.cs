@@ -21,9 +21,11 @@ namespace padroes_de_projeto
                     break;
                 case 1:
                     Console.WriteLine("Testando o padrão Builder.");
+                    new padroes_de_projeto.Builder.Client().Main();
                     break;
                 case 2:
                     Console.WriteLine("Testando o padrão Singleton.");
+                    new padroes_de_projeto.Singleton.Client().Main();
                     break;
 
                 default:
