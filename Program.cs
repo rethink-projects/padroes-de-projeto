@@ -11,7 +11,7 @@ namespace padroes_de_projeto
             // 0 - Abstract Factory
             // 1 - Builder
             // 2 - Singleton
-            var padraoEscolhido = 0;
+            var padraoEscolhido = 2;
 
             switch (padraoEscolhido)
             {
