@@ -19,6 +19,23 @@ namespace padroes_de_projeto.AbstractFactory
         ICheckbox CreateCheckbox();
     }
 
+    // Cada produto distinto de uma família de produtos deve ter uma
+    // interface base. Todas as variantes do produto devem
+    // implementar essa interface.
+    public interface IButton
+    {
+        string Paint();
+    }
+
+    // Aqui está a interface base de outro produto. Todos os
+    // produtos podem interagir entre si, mas a interação apropriada
+    // só é possível entre produtos da mesma variante concreta.
+    public interface ICheckbox
+    {
+        string Paint();
+
+    }
+
     // As fábricas concretas produzem uma família de produtos que
     // pertencem a uma única variante. A fábrica garante que os
     // produtos resultantes sejam compatíveis. Assinaturas dos
@@ -52,13 +69,7 @@ namespace padroes_de_projeto.AbstractFactory
         }
     }
 
-    // Cada produto distinto de uma família de produtos deve ter uma
-    // interface base. Todas as variantes do produto devem
-    // implementar essa interface.
-    public interface IButton
-    {
-        string Paint();
-    }
+
 
     // Produtos concretos são criados por fábricas concretas
     // correspondentes.
@@ -68,7 +79,7 @@ namespace padroes_de_projeto.AbstractFactory
         // Renderiza um botão no estilo Windows.
         public string Paint()
         {
-            return "The result of the product A1.";
+            return "Renderizando um botão no estilo Windows.";
         }
     }
 
@@ -77,25 +88,18 @@ namespace padroes_de_projeto.AbstractFactory
         // Renderiza um botão no estilo macOS.
         public string Paint()
         {
-            return "The result of the product A2.";
+            return "Renderizando um botão no estilo macOS.";
         }
     }
 
-    // Aqui está a interface base de outro produto. Todos os
-    // produtos podem interagir entre si, mas a interação apropriada
-    // só é possível entre produtos da mesma variante concreta.
-    public interface ICheckbox
-    {
-        string Paint();
 
-    }
 
     class WinCheckbox : ICheckbox
     {
         // Renderiza uma caixa de seleção estilo Windows.
         public string Paint()
         {
-            return "The result of the product B1.";
+            return "Renderizando uma caixa de seleção estilo Windows.";
         }
 
     }
@@ -105,7 +109,7 @@ namespace padroes_de_projeto.AbstractFactory
         // Renderiza uma caixa de seleção no estilo macOS.
         public string Paint()
         {
-            return "The result of the product B2.";
+            return "Renderiza uma caixa de seleção no estilo macOS.";
         }
 
     }
